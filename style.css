@@ -1,0 +1,532 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* .oswald-bold {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background: #2E323F;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFF;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.3125rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    color: #A59678;
+}
+
+p {
+    margin: 1.25rem 0;
+    line-height: 1.4;
+}
+
+span {
+    color: #A59678;
+}
+
+footer {
+    background: #3B4050;
+    color: #6F737F;
+    padding-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+}
+
+/* ============= NAV */
+
+.logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+.nav {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.125rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    visibility: hidden;
+    height: 0;
+    position: absolute; /* passa a ser absolute para gerar espaço aos elementos sequentes quando este some */
+}
+
+/* JS */
+.nav--visible {
+    visibility: visible; /* mostra os menus */
+    height: auto; /* é a altura de acordo com o conteúdo */
+    position: relative; /* posição relativa ao próprio elemento em si */
+}
+
+/* Nav button for mobile */
+ /* JS */
+.nav-toggle-btn {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    border-radius: 50%;
+    background: #A59678;
+    /* background: #3B4050; */
+    color: #FFF;
+    transition: opacity 250ms ease;
+    position: absolute;
+    right: 0;
+    top: -0.375rem;
+}
+
+.nav-toggle-btn:focus,
+.nav-toggle-btn:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative; /* it's not necessary to use "position: relative;" coz we won't move the lines already centered */
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: #FFF;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* Nav button for mobile END */
+
+.nav__list {
+    list-style: none;
+}
+
+.nav__list--primary {
+    margin: 2em 0;
+}
+
+.nav__item {
+    margin-top: .75rem;
+}
+
+.nav__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.nav__link:focus,
+.nav__link:hover {
+    opacity: .65;
+}
+
+.nav__link--button {
+    padding: .25rem .75rem;
+    background: #A59678;
+    color: #FFF;
+    border-radius: 100px;
+}
+
+/* ================= END NAV */
+
+.hero {
+    background: #3B4050;
+    padding: 2.5rem 0 3rem;
+}
+
+.hero__text {
+    margin: 2em 0;
+    color: #FFF;
+}
+
+.btn {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .2rem 1.75rem;
+    background: #A59678;
+    color: #FFF;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75;
+}
+
+.s-one {
+    background: #E8E9E8;
+    padding: 2.5rem 0 1.75rem;
+}
+
+.s-one__content {
+    text-align: center;
+}
+
+.s-one__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #A59678;
+}
+
+.s-one__text {
+    font-size: 1.125rem;
+    margin: 1.25rem 0;
+}
+
+.s-two {
+    background: #FFF;
+    padding: 2.5rem 0 3rem;
+}
+
+.s-two__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #A59678;
+    line-height: 1;
+}
+
+.s-two__text {
+    font-size: 1.3125rem;
+    margin: 1.25rem 0 1.5rem;
+}
+
+.a-one {
+    text-align: center;
+    width: 100%;
+}
+
+.a-one__content {
+    padding: 35px;
+    background: #3B4050;
+    color: #FFF;
+}
+
+.a-one__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1;
+}
+
+.a-one__text {
+    margin: 23px 0 0;
+}
+
+.a-one__content + .a-one__content {
+    background: #3B4050;
+    margin-top: 25px;
+}
+
+.footer_title {
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFF;
+    padding: 40px 0;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.about__text,
+.around__list,
+.other-things__list {
+    margin: 1.25rem 0;
+}
+
+.more__list {
+    margin-top: 1.25rem;
+}
+
+.around__list,
+.other-things__list,
+.more__list {
+    list-style: none;
+}
+
+.around__item,
+.other-things__item,
+.more__item {
+    margin: 20px 0;
+}
+
+/* inline elements cannot padding or margin anything */
+.around__list--link,
+.other-things__list--link,
+.more__list--link {
+    color: #6F737F;
+    /* color: #FFF; */
+    text-decoration: none;
+}
+
+.around__list--link:focus,
+.around__list--link:hover,
+.other-things__list--link:focus,
+.other-things__list--link:hover,
+.more__list--link:focus,
+.more__list--link:hover {
+    opacity: .65;
+}
+
+/* 700px */
+@media (min-width: 43.75rem) {
+
+    .container {
+        max-width: 800px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        position: relative;
+    }
+
+    .nav__list {
+        display: flex;
+        margin: 0;
+    }
+
+    .nav__item {
+        margin: 0 0 0 1em;
+    }
+
+    .nav__list--primary {
+        margin-right: 1.25em;
+    }
+
+    .nav__link--button {
+        padding: .5rem 1.5rem;
+    }
+
+    .hero__content {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 1.25rem;
+    }
+
+    .hero__text {
+        margin: 0;
+    }
+
+    .s-one__content + .s-one__content {
+        margin-left: 20px;
+    }
+
+    .s-one__text {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .a-one__content {
+        padding: 30px 15px;
+    }
+
+    .a-one__content + .a-one__content {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .a-one__text {
+        font-size: 1rem;
+        /* font-size: 1.125rem; */
+    }
+}
+
+/* 1000px */
+@media (min-width: 62.5rem) {
+
+    .hero {
+        padding: 7rem 0 10rem;
+    }
+
+    h1 {
+        font-size: 5.625rem;
+    }
+
+    .nav__item {
+        margin-left: 4rem;
+    }
+
+    .nav__item--sign-in {
+        margin-left: 3rem;
+    }
+
+    .btn {
+        font-size: 2rem;
+        padding: .5rem 3rem;
+    }
+
+    .footer_title {
+        font-size: 4rem;
+        padding: 5rem 0 6rem;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero__title {
+        width: 100%;
+    }
+
+    .hero__text {
+        font-size: 1.5rem;
+        width: 95%;
+    }
+
+    .s-one {
+        padding: 8rem 0 8rem;
+    }
+
+    .s-one__text {
+        font-size: 1.125rem;
+    }
+
+    .s-one__content + .s-one__content {
+        margin-left: 8vw;
+    }
+    
+    .s-two {
+        padding: 10rem 0 8rem;
+    }
+
+    .s-two--row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .s-two__content {
+        width: 60%;
+    }
+
+    .a-one {
+        width: 30%;
+    }
+
+    .a-one--col {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .a-one__content + .a-one__content {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .a-one__text {
+        font-size: 1.125rem;
+    }
+
+    .footer__content--row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer__content--row {
+        justify-content: space-around;
+    }
+
+    .about {
+        width: 55%;
+    }
+}
